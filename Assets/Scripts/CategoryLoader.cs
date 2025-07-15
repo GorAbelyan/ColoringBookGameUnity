@@ -71,6 +71,7 @@ namespace Assets.Scripts
         private void LoadSubCategories()
         {
 
+
             var categoryName = SceneParams.categoryName;
             TextAsset jsonText = Resources.Load<TextAsset>($"Json/{SceneParams.categoryName}");
             List<CategoryData> categories = JsonUtilityWrapper.FromJson<CategoryData>(jsonText.text);
