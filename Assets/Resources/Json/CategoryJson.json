@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Animals",
+    "logo": "Categories/CategoryLogo/animals",
+    "logoHover": "Categories/CategoryLogo/animalsHover",
+    "type": "Animal"
+  },
+  {
+    "name": "Space",
+    "logo": "Categories/CategoryLogo/space",
+    "logoHover": "Categories/CategoryLogo/spaceHover",
+    "type": "Space"
+  },
+  {
+    "name": "Fruits",
+    "logo": "Categories/CategoryLogo/fruits",
+    "logoHover": "Categories/CategoryLogo/fruitsHover",
+    "type": "Fruit"
+  },
+  {
+    "name": "Flowers",
+    "logo": "Categories/CategoryLogo/flowersNormal",
+    "logoHover": "Categories/CategoryLogo/flowersHover",
+    "type": "Flower"
+  },
+  {
+    "name": "Patterns",
+    "logo": "Categories/CategoryLogo/patterns",
+    "logoHover": "Categories/CategoryLogo/patternsHover",
+    "type": "Pattern"
+  }
+]

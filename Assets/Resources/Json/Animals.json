@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Item1",
+    "logo": "Categories/SubCategoryLogo/Animals/animal1",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal1Hover",
+    "type": "Animal"
+  },
+  {
+    "name": "Item2",
+    "logo": "Categories/SubCategoryLogo/Animals/animal2",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal2Hover",
+    "type": "Animal"
+  }
+   
+]
