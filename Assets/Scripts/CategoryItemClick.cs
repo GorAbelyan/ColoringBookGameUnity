@@ -14,7 +14,8 @@ public class CategoryItemClick : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneParams.categoryName = CategoryName;
+        if (!string.IsNullOrEmpty(CategoryName))
+            SceneParams.categoryName = CategoryName;
         SceneManager.LoadScene(sceneToLoad);
     }
 }

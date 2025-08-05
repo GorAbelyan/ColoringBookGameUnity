@@ -6,9 +6,39 @@
     "type": "Animal"
   },
   {
-    "name": "Item2",
-    "logo": "Categories/SubCategoryLogo/Animals/animal2",
-    "logoHover": "Categories/SubCategoryLogo/Animals/animal2Hover",
+    "name": "Item3",
+    "logo": "Categories/SubCategoryLogo/Animals/animal3",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal3Hover",
+    "type": "Animal"
+  },
+ {
+    "name": "Item3",
+    "logo": "Categories/SubCategoryLogo/Animals/animal3",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal3Hover",
+    "type": "Animal"
+  },
+ {
+    "name": "Item3",
+    "logo": "Categories/SubCategoryLogo/Animals/animal3",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal3Hover",
+    "type": "Animal"
+  },
+ {
+    "name": "Item4",
+    "logo": "Categories/SubCategoryLogo/Animals/animal4",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal4Hover",
+    "type": "Animal"
+  },
+{
+    "name": "Item5",
+    "logo": "Categories/SubCategoryLogo/Animals/animal5",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal5Hover",
+    "type": "Animal"
+  },
+{
+    "name": "Item6",
+    "logo": "Categories/SubCategoryLogo/Animals/animal6",
+    "logoHover": "Categories/SubCategoryLogo/Animals/animal6Hover",
     "type": "Animal"
   }
    

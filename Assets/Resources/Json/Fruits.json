@@ -10,6 +10,36 @@
     "logo": "Categories/SubCategoryLogo/Fruits/fruits2",
     "logoHover": "Categories/SubCategoryLogo/Fruits/fruits2Hover",
     "type": "Fruits"
+  },
+  {
+    "name": "Item3",
+    "logo": "Categories/SubCategoryLogo/Fruits/fruits3",
+    "logoHover": "Categories/SubCategoryLogo/Fruits/fruits3Hover",
+    "type": "Fruits"
+  },
+  {
+    "name": "Item4",
+    "logo": "Categories/SubCategoryLogo/Fruits/fruits4",
+    "logoHover": "Categories/SubCategoryLogo/Fruits/fruits4Hover",
+    "type": "Fruits"
+  },
+  {
+    "name": "Item5",
+    "logo": "Categories/SubCategoryLogo/Fruits/fruits5",
+    "logoHover": "Categories/SubCategoryLogo/Fruits/fruits5Hover",
+    "type": "Fruits"
+  },
+  {
+    "name": "Item6",
+    "logo": "Categories/SubCategoryLogo/Fruits/fruits6",
+    "logoHover": "Categories/SubCategoryLogo/Fruits/fruits6Hover",
+    "type": "Fruits"
+  },
+  {
+    "name": "Item7",
+    "logo": "Categories/SubCategoryLogo/Fruits/fruits7",
+    "logoHover": "Categories/SubCategoryLogo/Fruits/fruits7Hover",
+    "type": "Fruits"
   }
    
 ]

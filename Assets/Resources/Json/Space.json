@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Item1",
+    "logo": "Categories/SubCategoryLogo/Space/space1",
+    "logoHover": "Categories/SubCategoryLogo/Space/space1Hover",
+    "type": "Space"
+  },
+{
+    "name": "Item2",
+    "logo": "Categories/SubCategoryLogo/Space/space2",
+    "logoHover": "Categories/SubCategoryLogo/Space/space2Hover",
+    "type": "Space"
+  },
+{
+    "name": "Item1",
+    "logo": "Categories/SubCategoryLogo/Space/space3",
+    "logoHover": "Categories/SubCategoryLogo/Space/space3Hover",
+    "type": "Space"
+  },
+{
+    "name": "Item1",
+    "logo": "Categories/SubCategoryLogo/Space/space4",
+    "logoHover": "Categories/SubCategoryLogo/Space/space4Hover",
+    "type": "Space"
+  }  
+]
