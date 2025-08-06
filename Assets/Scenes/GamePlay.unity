@@ -500,7 +500,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1090958836}
         m_TargetAssemblyTypeName: CategoryItemClick, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadSceneFromBackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -560,6 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6314122280acd464c9acc6f733779e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 0}
+  delayBeforeLoad: 1
   sceneToLoad: SubCategory
   CategoryName: 
 --- !u!1 &1771297630

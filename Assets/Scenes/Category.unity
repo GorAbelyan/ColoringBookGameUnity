@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contentParent: {fileID: 725090195}
-  itemPrefab: {fileID: 9046574985131846241, guid: 37c2a21964f60074ab053549ffab43ca, type: 3}
+  itemPrefab: {fileID: 1481554861070252890, guid: 37c2a21964f60074ab053549ffab43ca, type: 3}
   IsSubCategory: 0
 --- !u!1 &1072366006
 GameObject:
