@@ -17,20 +17,20 @@ public class CategoryItemClick : MonoBehaviour
     public string sceneToLoad;
     public string CategoryName;
 
-   
-     public void LoadScene()
+
+    public void LoadScene()
     {
         clickSound.Play();
         StartCoroutine(LoadSceneAfterDelay());
     }
-     public void LoadSceneFromBackButton()
+    public void LoadSceneFromBackButton()
     {
-          if (!string.IsNullOrEmpty(CategoryName))
+        if (!string.IsNullOrEmpty(CategoryName))
             SceneParams.categoryName = CategoryName;
 
         SceneManager.LoadScene(sceneToLoad);
     }
-    
+
 
 
     private IEnumerator LoadSceneAfterDelay()
