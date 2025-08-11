@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    public ImageDrawer drawer;
+    public GPUImageDrawerDynamic drawer;
     public Button redButton;
     public Button greenButton;
     public Button eraseButton;
