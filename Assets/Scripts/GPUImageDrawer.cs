@@ -6,7 +6,9 @@ public class GPUImageDrawerDynamic : MonoBehaviour
     public RawImage rawImage;
     public Texture2D brushTexture;
     public Color brushColor = Color.red;
+    public Shader shader;
     [Range(0.001f, 0.5f)] public float brushSize = 0.05f;
+    public Texture2D starTexture;
 
     private RenderTexture rt;
     private Material brushMat;
@@ -16,15 +18,18 @@ public class GPUImageDrawerDynamic : MonoBehaviour
     {
         rt = new RenderTexture(2000, 2000, 0, RenderTextureFormat.ARGB32);
         rt.Create();
-
-        brushMat = new Material(Shader.Find("Custom/Brush"));
-        brushMat.SetTexture("_BrushTex", brushTexture);
-
         rawImage.texture = rt;
+
+
+        brushMat = new Material(shader);
+        brushMat.SetTexture("_BrushTex", brushTexture);
+       // brushMat.SetTexture("_MaskTex", starTexture);
 
         // Clear white
         RenderTexture.active = rt;
         GL.Clear(true, true, Color.white);
+
+        Graphics.Blit(starTexture, rt);
         RenderTexture.active = null;
     }
     public void SetBrushColor(Color newColor)
@@ -85,6 +90,9 @@ public class GPUImageDrawerDynamic : MonoBehaviour
 
     void StampBrush(Vector2 uv)
     {
+        if (rawImage == null || rt == null || brushTexture == null || brushMat == null)
+            return;
+
         RenderTexture.active = rt;
         brushMat.SetColor("_Color", brushColor);
         brushMat.SetFloat("_BrushSize", brushSize);
@@ -93,14 +101,42 @@ public class GPUImageDrawerDynamic : MonoBehaviour
         GL.PushMatrix();
         GL.LoadPixelMatrix(0, rt.width, rt.height, 0);
 
+        // RT-space center point for the UV
         float px = uv.x * rt.width;
-        float py = uv.y * rt.height; 
-        float sizePx = brushSize * rt.width;
+        float py = uv.y * rt.height;
 
-        Rect rect = new Rect(px - sizePx / 2f, py - sizePx / 2f, sizePx, sizePx);
-        Graphics.DrawTexture(rect, brushTexture, brushMat);
+        // RawImage rect in local units (the same rect used to compute UVs)
+        Rect imageRect = rawImage.rectTransform.rect;
+        float rectW = imageRect.width;
+        float rectH = imageRect.height;
+        if (rectW <= 0 || rectH <= 0)
+        {
+            GL.PopMatrix();
+            RenderTexture.active = null;
+            return;
+        }
+
+        // --- CORRECT APPROACH ---
+        // Choose a display-space diameter that is the same for X and Y so the brush is circular.
+        // Here we use the smaller side so the circle fits regardless of orientation.
+        float desiredDisplayDiameter = brushSize * Mathf.Min(rectW, rectH);
+
+        // Convert that display size into RenderTexture pixels (X and Y separately).
+        float sizePxX = desiredDisplayDiameter * (rt.width / rectW);
+        float sizePxY = desiredDisplayDiameter * (rt.height / rectH);
+
+        // Build the rectangle in RT pixel space
+        Rect drawRect = new Rect(
+            px - sizePxX * 0.5f,
+            py - sizePxY * 0.5f,
+            sizePxX,
+            sizePxY
+        );
+
+        Graphics.DrawTexture(drawRect, brushTexture, brushMat);
 
         GL.PopMatrix();
         RenderTexture.active = null;
     }
+
 }
